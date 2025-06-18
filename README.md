@@ -2,9 +2,14 @@
 Ứng dụng quản lý chuỗi quần áo 
 # Describe and Analyse project
 # Đối tượng:
-Cua hang 
+1.Sản phẩm 
 
-Nhan vien
+2. Cửa hàng 
 
-San pham 
+3. Nhân viên 
+
+4. Khách hàng 
+
+5. Đơn hàng 
+
 
