@@ -1,18 +1,15 @@
-## Getting Started
+# OOP_N05_T3_2025_GROUP_DANG_VINH_HUAN
+Ứng dụng quản lý chuỗi quần áo 
+# Describe and Analyse project
+# Đối tượng:
+1. Sản phẩm 
+2. Cửa hàng 
+3. Nhân viên 
+4. Khách hàng 
+5. Đơn hàng 
+# Thành viên
+1. Bùi Hoàng Đăng, MSV: 24106065 (buihoangdang)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+2. Nguyễn Văn Vinh, MSV:24108222 (Vinh210)
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+3. Vũ Bá Huân, MSV:24100134 (HuanVu3003)
