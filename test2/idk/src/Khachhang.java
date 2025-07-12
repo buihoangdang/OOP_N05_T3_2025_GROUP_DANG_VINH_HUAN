@@ -62,3 +62,4 @@ public class KhachHang {
         System.out.println("Địa chỉ: " + address);
     }
 }
+
