@@ -47,6 +47,9 @@ public class QuanLyKhachHang {
     public void Print() {
         for (KhachHang kh : khachHang) {
             System.out.println("KH: " + kh.id + " - " + kh.name + " - " + kh.phone + " - " + kh.address);
+        
         }
+   
     }
+
 }
