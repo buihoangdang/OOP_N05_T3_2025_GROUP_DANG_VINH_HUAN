@@ -36,5 +36,7 @@ public class Main {
         qlch.Print();
         qlch.Delete("CH2");
         qlch.Print();
+
     }
+
 }
