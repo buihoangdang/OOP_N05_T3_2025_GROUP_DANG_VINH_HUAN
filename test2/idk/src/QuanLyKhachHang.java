@@ -47,9 +47,14 @@ public class QuanLyKhachHang {
     public void Print() {
         for (KhachHang kh : khachHang) {
             System.out.println("KH: " + kh.id + " - " + kh.name + " - " + kh.phone + " - " + kh.address);
-        
         }
-   
     }
-
+    public void timKiemKhachHang(String tuKhoa) {
+        System.out.println("Kết quả tìm kiếm cho: " + tuKhoa);
+        for (KhachHang kh : khachHang) {
+            if (kh.name.toLowerCase().contains(tuKhoa.toLowerCase()) || kh.phone.contains(tuKhoa)) {
+                System.out.println("KH: " + kh.id + " - " + kh.name + " - " + kh.phone + " - " + kh.address);
+            }
+        }
+    }
 }
