@@ -37,7 +37,8 @@ public class QuanLySanPham {
                 System.out.print("Giá mới: ");
                 sanPham.get(i).price = sc.nextDouble();
                 System.out.print("Số lượng mới: ");
-                sanPham.get(i).soluong = sc.nextInt(); sc.nextLine();
+                sanPham.get(i).soluong = sc.nextInt();
+                sc.nextLine(); // Clear buffer
                 break;
             }
         }
@@ -47,6 +48,15 @@ public class QuanLySanPham {
     public void Print() {
         for (SanPham sp : sanPham) {
             System.out.println("SP: " + sp.id + " - " + sp.name + " - " + sp.price + "đ - SL: " + sp.soluong);
+        }
+    }
+
+    public void hienThiSanPhamTheoCuaHang(String maCuaHang) {
+        System.out.println("Các sản phẩm thuộc cửa hàng " + maCuaHang + ":");
+        for (SanPham sp : sanPham) {
+            if (sp.idCuaHang.equals(maCuaHang)) {
+                System.out.println("SP: " + sp.id + " - " + sp.name + " - " + sp.price + "đ - SL: " + sp.soluong);
+            }
         }
     }
 }
