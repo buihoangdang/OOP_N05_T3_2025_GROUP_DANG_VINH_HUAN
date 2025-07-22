@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,9 +11,11 @@ public class Main {
         QuanLyKhachHang qlkh = new QuanLyKhachHang(dsKH);
         QuanLyCuaHang qlch = new QuanLyCuaHang(dsCH);
 
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("===== SẢN PHẨM =====");
-        qlsp.Create(new SanPham("SP1", "Áo thun", 120000, 10));
-        qlsp.Create(new SanPham("SP2", "Quần jeans", 250000, 5));
+        qlsp.Create(new SanPham("SP1", "Áo thun", 120000, 10, "CH1"));
+        qlsp.Create(new SanPham("SP2", "Quần jeans", 250000, 5, "CH2"));
         qlsp.Print();
         qlsp.Edit("SP1");
         qlsp.Print();
@@ -37,6 +40,18 @@ public class Main {
         qlch.Delete("CH2");
         qlch.Print();
 
-    }
+   
 
+        System.out.println("\n===== Hiển thị sản phẩm theo mã cửa hàng =====");
+        System.out.print("Nhập mã cửa hàng: ");
+        String maCH = sc.nextLine();
+        qlsp.hienThiSanPhamTheoCuaHang(maCH);
+
+        System.out.println("\n===== Tìm kiếm khách hàng theo tên hoặc SĐT =====");
+        System.out.print("Nhập từ khóa tìm kiếm: ");
+        String tuKhoa = sc.nextLine();
+        qlkh.timKiemKhachHang(tuKhoa);
+
+       
+    }
 }
