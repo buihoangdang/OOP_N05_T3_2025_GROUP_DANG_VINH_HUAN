@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+ import test.testStudent;
+
 public class Main {
     public static void main(String[] args) {
         // ArrayList<SanPham> dsSP = new ArrayList<>();
@@ -52,12 +54,8 @@ public class Main {
         // String tuKhoa = sc.nextLine();
         // qlkh.timKiemKhachHang(tuKhoa);
 
-       Student s1 = new Student("Fred", 3.0F);
-       Student s2 = new Student("Sam", 3.5F);
-       Student s3 = new Student("Steve", 2.1F);
-       System.out.println("So sánh s1 và s2: " + s1.compareTo(s2)); 
-       System.out.println("So sánh s2 và s1: " + s2.compareTo(s1)); 
-       System.out.println("So sánh s1 và s3: " + s1.compareTo(s3)); 
+       testStudent test = new testStudent();
+       test.runtest();
 
     }
 }
