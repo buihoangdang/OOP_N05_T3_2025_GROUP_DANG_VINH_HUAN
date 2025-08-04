@@ -71,7 +71,7 @@
 👉 https://github.com/buihoangdang/OOP_N05_T3_2025_GROUP_DANG_VINH_HUAN/
 
 📁 **Thư mục chứa mã nguồn chính:**  
-👉 https://github.com/buihoangdang/OOP_N05_T3_2025_GROUP_DANG_VINH_HUAN/tree/maintest2/idk/
+👉 https://github.com/buihoangdang/OOP_N05_T3_2025_GROUP_DANG_VINH_HUAN/tree/main/test2/idk
 
 ---
 
