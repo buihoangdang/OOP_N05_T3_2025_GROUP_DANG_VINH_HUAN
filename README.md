@@ -61,7 +61,7 @@
 |------------------------|------------|----------------------------------------------------|
 | 🧑‍💻 Nguyễn Văn Vinh       | 24108222   | [@Vinh210](https://github.com/Vinh210)             |
 | 👨‍💻 Bùi Hoàng Đăng      | 24106065   | [@buihoangdang](https://github.com/buihoangdang) |
-| 👨‍💻 Vũ Bá Huân         | 24100134   | [@dangtai-0510](https://github.com/HuanVu3003)     |
+| 👨‍💻 Vũ Bá Huân         | 24100134   | [@HuanVu3003](https://github.com/HuanVu3003)     |
 
 ---
 
