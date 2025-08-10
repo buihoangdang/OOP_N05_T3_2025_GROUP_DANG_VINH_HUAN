@@ -132,142 +132,251 @@ public class MainController {
         }
     }
     
-    public void handleAddButton(JTabbedPane tabbedPane){        
+    public void handleAddButton(JTabbedPane tabbedPane) {        
         int selectedIndex = tabbedPane.getSelectedIndex();
 
         switch (selectedIndex) {
             case 0: // Tab Cửa hàng
                 CuaHang cuahang = view.getShopTextField();
-                
-                 // Đọc danh sách hiện tại từ XML
-                List<CuaHang> cuaHangs = DataXMLHandler.readCuaHangFromXML();
+                if (cuahang == null) return;
 
-                // Thêm cửa hàng mới vào danh sách
-                cuaHangs.add(cuahang);
-
-                // Ghi lại vào file XML
-                DataXMLHandler.writeCuaHangToXML(cuaHangs);
-            break;
-
-            case 1: // Tab Đơn hàng
-                DonHang donhang = view.getOrderTextField();
-                
-                 // Đọc danh sách hiện tại từ XML
-                List<DonHang> donHangs = DataXMLHandler.readDonHangFromXML();
-
-                // Thêm cửa hàng mới vào danh sách
-                donHangs.add(donhang);
-
-                // Ghi lại vào file XML
-                DataXMLHandler.writeDonHangToXML(donHangs);
-            break;
-
-            case 2: // Tab Khách hàng
-                KhachHang khachhang = view.getCustomerTextField();
-                
-                 // Đọc danh sách hiện tại từ XML
-                List<KhachHang> khachHangs = DataXMLHandler.readKhachHangFromXML();
-
-                // Thêm cửa hàng mới vào danh sách
-                khachHangs.add(khachhang);
-
-                // Ghi lại vào file XML
-                DataXMLHandler.writeKhachHangToXML(khachHangs);
-            break;
-
-            case 3: // Tab Nhân viên
-                NhanVien nhanvien = view.getStaffTextField();
-                
-                 // Đọc danh sách hiện tại từ XML
-                List<NhanVien> nhanViens = DataXMLHandler.readNhanViensFromXML();
-
-                // Thêm cửa hàng mới vào danh sách
-                nhanViens.add(nhanvien);
-
-                // Ghi lại vào file XML
-                DataXMLHandler.writeNhanViensToXML(nhanViens);
-            break;
-
-            case 4: // Tab Sản phẩm
-                SanPham sanpham = view.getProductTextField();
-                
-                 // Đọc danh sách hiện tại từ XML
-                List<SanPham> sanPhams = DataXMLHandler.readProductsFromXML();
-
-                // Thêm cửa hàng mới vào danh sách
-                sanPhams.add(sanpham);
-
-                // Ghi lại vào file XML
-                DataXMLHandler.writeProductsToXML(sanPhams);
-            break;
-        }
-        handleRefreshButton(tabbedPane);
-    }
-    
-    public void handleEditButton(JTabbedPane tabbedPane, JTable table){
-        int selectedIndex = tabbedPane.getSelectedIndex();
-
-        switch (selectedIndex) {
-            case 0: // Tab Cửa hàng
-                CuaHang cuahang = view.getShopTextField();
                 List<CuaHang> cuaHangs = DataXMLHandler.readCuaHangFromXML();
 
                 for (CuaHang ch : cuaHangs) {
                     if (ch.getMaCuaHang().equals(cuahang.getMaCuaHang())) {
-                        ch.setDiaChi(cuahang.getDiaChi());
-                        ch.setTenChiNhanh(cuahang.getTenChiNhanh());
+                        JOptionPane.showMessageDialog(null, "Mã cửa hàng đã tồn tại, không thể thêm.");
+                        return;
                     }
+                }
+
+                cuaHangs.add(cuahang);
+                DataXMLHandler.writeCuaHangToXML(cuaHangs);
+                break;
+
+            case 1: // Tab Đơn hàng
+                DonHang donhang = view.getOrderTextField();
+                if (donhang == null) return;
+
+                List<DonHang> donHangs = DataXMLHandler.readDonHangFromXML();
+
+                for (DonHang dh : donHangs) {
+                    if (dh.getMaDonHang().equals(donhang.getMaDonHang())) {
+                        JOptionPane.showMessageDialog(null, "Mã đơn hàng đã tồn tại, không thể thêm.");
+                        return;
+                    }
+                }
+
+                donHangs.add(donhang);
+                DataXMLHandler.writeDonHangToXML(donHangs);
+                break;
+
+            case 2: // Tab Khách hàng
+                KhachHang khachhang = view.getCustomerTextField();
+                if (khachhang == null) return;
+
+                List<KhachHang> khachHangs = DataXMLHandler.readKhachHangFromXML();
+
+                for (KhachHang kh : khachHangs) {
+                    if (kh.getMaKhachHang().equals(khachhang.getMaKhachHang())) {
+                        JOptionPane.showMessageDialog(null, "Mã khách hàng đã tồn tại, không thể thêm.");
+                        return;
+                    }
+                }
+
+                khachHangs.add(khachhang);
+                DataXMLHandler.writeKhachHangToXML(khachHangs);
+                break;
+
+            case 3: // Tab Nhân viên
+                NhanVien nhanvien = view.getStaffTextField();
+                if (nhanvien == null) return;
+
+                List<NhanVien> nhanViens = DataXMLHandler.readNhanViensFromXML();
+
+                for (NhanVien nv : nhanViens) {
+                    if (nv.getMaNhanVien().equals(nhanvien.getMaNhanVien())) {
+                        JOptionPane.showMessageDialog(null, "Mã nhân viên đã tồn tại, không thể thêm.");
+                        return;
+                    }
+                }
+
+                nhanViens.add(nhanvien);
+                DataXMLHandler.writeNhanViensToXML(nhanViens);
+                break;
+
+            case 4: // Tab Sản phẩm
+                SanPham sanpham = view.getProductTextField();
+                if (sanpham == null) return;
+
+                List<SanPham> sanPhams = DataXMLHandler.readProductsFromXML();
+
+                for (SanPham sp : sanPhams) {
+                    if (sp.getMaSanPham().equals(sanpham.getMaSanPham())) {
+                        JOptionPane.showMessageDialog(null, "Mã sản phẩm đã tồn tại, không thể thêm.");
+                        return;
+                    }
+                }
+
+                sanPhams.add(sanpham);
+                DataXMLHandler.writeProductsToXML(sanPhams);
+                break;
+        }
+        handleRefreshButton(tabbedPane);
+    }
+
+    public void handleEditButton(JTabbedPane tabbedPane, JTable table) {
+        int selectedIndex = tabbedPane.getSelectedIndex();
+
+        switch (selectedIndex) {
+            case 0: // Tab Cửa hàng
+                CuaHang cuahang = view.getShopTextField();
+                if (cuahang == null) return;
+
+                int selectedRow0 = table.getSelectedRow();
+                if (selectedRow0 < 0) {
+                    JOptionPane.showMessageDialog(null, "Vui lòng chọn một cửa hàng để sửa.");
+                    return;
+                }
+                String originalID0 = (String) table.getValueAt(selectedRow0, 0);
+                if (!originalID0.equals(cuahang.getMaCuaHang())) {
+                    JOptionPane.showMessageDialog(null, "Không được chỉnh sửa mã cửa hàng.");
+                    return;
+                }
+
+                List<CuaHang> cuaHangs = DataXMLHandler.readCuaHangFromXML();
+                boolean found0 = false;
+                for (CuaHang ch : cuaHangs) {
+                    if (ch.getMaCuaHang().equals(cuahang.getMaCuaHang())) {
+                        ch.setTenChiNhanh(cuahang.getTenChiNhanh());
+                        ch.setDiaChi(cuahang.getDiaChi());
+                        found0 = true;
+                        break;
+                    }
+                }
+                if (!found0) {
+                    JOptionPane.showMessageDialog(null, "Không tìm thấy cửa hàng để sửa.");
+                    return;
                 }
                 DataXMLHandler.writeCuaHangToXML(cuaHangs);
                 break;
 
             case 1: // Tab Đơn hàng
                 DonHang donhang = view.getOrderTextField();
-                List<DonHang> donHangs = DataXMLHandler.readDonHangFromXML();
+                if (donhang == null) return;
 
+                int selectedRow1 = table.getSelectedRow();
+                if (selectedRow1 < 0) {
+                    JOptionPane.showMessageDialog(null, "Vui lòng chọn một đơn hàng để sửa.");
+                    return;
+                }
+                String originalID1 = (String) table.getValueAt(selectedRow1, 0);
+                if (!originalID1.equals(donhang.getMaDonHang())) {
+                    JOptionPane.showMessageDialog(null, "Không được chỉnh sửa mã đơn hàng.");
+                    return;
+                }
+
+                List<DonHang> donHangs = DataXMLHandler.readDonHangFromXML();
+                boolean found1 = false;
                 for (DonHang dh : donHangs) {
                     if (dh.getMaDonHang().equals(donhang.getMaDonHang())) {
                         dh.setMaKhachHang(donhang.getMaKhachHang());
                         dh.setNgayDat(donhang.getNgayDat());
                         dh.setTongTien(donhang.getTongTien());
+                        found1 = true;
+                        break;
                     }
+                }
+                if (!found1) {
+                    JOptionPane.showMessageDialog(null, "Không tìm thấy đơn hàng để sửa.");
+                    return;
                 }
                 DataXMLHandler.writeDonHangToXML(donHangs);
                 break;
 
             case 2: // Tab Khách hàng
                 KhachHang khachhang = view.getCustomerTextField();
-                List<KhachHang> khachHangs = DataXMLHandler.readKhachHangFromXML();
+                if (khachhang == null) return;
 
+                int selectedRow2 = table.getSelectedRow();
+                if (selectedRow2 < 0) {
+                    JOptionPane.showMessageDialog(null, "Vui lòng chọn một khách hàng để sửa.");
+                    return;
+                }
+                String originalID2 = (String) table.getValueAt(selectedRow2, 0);
+                if (!originalID2.equals(khachhang.getMaKhachHang())) {
+                    JOptionPane.showMessageDialog(null, "Không được chỉnh sửa mã khách hàng.");
+                    return;
+                }
+
+                List<KhachHang> khachHangs = DataXMLHandler.readKhachHangFromXML();
+                boolean found2 = false;
                 for (KhachHang kh : khachHangs) {
                     if (kh.getMaKhachHang().equals(khachhang.getMaKhachHang())) {
                         kh.setHoTen(khachhang.getHoTen());
                         kh.setDiaChi(khachhang.getDiaChi());
                         kh.setSoDienThoai(khachhang.getSoDienThoai());
+                        found2 = true;
+                        break;
                     }
+                }
+                if (!found2) {
+                    JOptionPane.showMessageDialog(null, "Không tìm thấy khách hàng để sửa.");
+                    return;
                 }
                 DataXMLHandler.writeKhachHangToXML(khachHangs);
                 break;
 
             case 3: // Tab Nhân viên
                 NhanVien nhanvien = view.getStaffTextField();
-                List<NhanVien> nhanViens = DataXMLHandler.readNhanViensFromXML();
+                if (nhanvien == null) return;
 
+                int selectedRow3 = table.getSelectedRow();
+                if (selectedRow3 < 0) {
+                    JOptionPane.showMessageDialog(null, "Vui lòng chọn một nhân viên để sửa.");
+                    return;
+                }
+                String originalID3 = (String) table.getValueAt(selectedRow3, 0);
+                if (!originalID3.equals(nhanvien.getMaNhanVien())) {
+                    JOptionPane.showMessageDialog(null, "Không được chỉnh sửa mã nhân viên.");
+                    return;
+                }
+
+                List<NhanVien> nhanViens = DataXMLHandler.readNhanViensFromXML();
+                boolean found3 = false;
                 for (NhanVien nv : nhanViens) {
                     if (nv.getMaNhanVien().equals(nhanvien.getMaNhanVien())) {
                         nv.setHoTen(nhanvien.getHoTen());
                         nv.setViTri(nhanvien.getViTri());
                         nv.setTuoi(nhanvien.getTuoi());
                         nv.setCuaHang(nhanvien.getCuaHang());
+                        found3 = true;
+                        break;
                     }
+                }
+                if (!found3) {
+                    JOptionPane.showMessageDialog(null, "Không tìm thấy nhân viên để sửa.");
+                    return;
                 }
                 DataXMLHandler.writeNhanViensToXML(nhanViens);
                 break;
 
             case 4: // Tab Sản phẩm
                 SanPham sanpham = view.getProductTextField();
-                List<SanPham> sanPhams = DataXMLHandler.readProductsFromXML();
+                if (sanpham == null) return;
 
+                int selectedRow4 = table.getSelectedRow();
+                if (selectedRow4 < 0) {
+                    JOptionPane.showMessageDialog(null, "Vui lòng chọn một sản phẩm để sửa.");
+                    return;
+                }
+                String originalID4 = (String) table.getValueAt(selectedRow4, 0);
+                if (!originalID4.equals(sanpham.getMaSanPham())) {
+                    JOptionPane.showMessageDialog(null, "Không được chỉnh sửa mã sản phẩm.");
+                    return;
+                }
+
+                List<SanPham> sanPhams = DataXMLHandler.readProductsFromXML();
+                boolean found4 = false;
                 for (SanPham sp : sanPhams) {
                     if (sp.getMaSanPham().equals(sanpham.getMaSanPham())) {
                         sp.setTenSanPham(sanpham.getTenSanPham());
@@ -275,7 +384,13 @@ public class MainController {
                         sp.setGia(sanpham.getGia());
                         sp.setSize(sanpham.getSize());
                         sp.setSoLuongTon(sanpham.getSoLuongTon());
+                        found4 = true;
+                        break;
                     }
+                }
+                if (!found4) {
+                    JOptionPane.showMessageDialog(null, "Không tìm thấy sản phẩm để sửa.");
+                    return;
                 }
                 DataXMLHandler.writeProductsToXML(sanPhams);
                 break;
