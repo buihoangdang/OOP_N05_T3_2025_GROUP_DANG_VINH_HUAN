@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<khachHangs>
+    <khachHang>
+        <maKhachHang>KH01</maKhachHang>
+        <hoTen>Khach hang 01</hoTen>
+        <soDienThoai>0000000001</soDienThoai>
+        <diaChi>Dia chi 01</diaChi>
+    </khachHang>
+    <khachHang>
+        <maKhachHang>KH02</maKhachHang>
+        <hoTen>Khach hang 02</hoTen>
+        <soDienThoai>0000000002</soDienThoai>
+        <diaChi>Dia chi 02</diaChi>
+    </khachHang>
+    <khachHang>
+        <maKhachHang>KH03</maKhachHang>
+        <hoTen>Khach hang 03</hoTen>
+        <soDienThoai>0000000003</soDienThoai>
+        <diaChi>Dia chi 03</diaChi>
+    </khachHang>
+    <khachHang>
+        <maKhachHang>KH04</maKhachHang>
+        <hoTen>Khach hang 04</hoTen>
+        <soDienThoai>0000000004</soDienThoai>
+        <diaChi>Dia chi 04</diaChi>
+    </khachHang>
+</khachHangs>
