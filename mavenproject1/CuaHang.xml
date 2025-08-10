@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cuahangs>
+    <cuahang>
+        <maCuaHang>CH01</maCuaHang>
+        <tenChiNhanh>Chi nhanh 01</tenChiNhanh>
+        <diaChi>Dia chi 01</diaChi>
+    </cuahang>
+    <cuahang>
+        <maCuaHang>CH02</maCuaHang>
+        <tenChiNhanh>Chi nhanh 02</tenChiNhanh>
+        <diaChi>Dia chi 02</diaChi>
+    </cuahang>
+    <cuahang>
+        <maCuaHang>CH03</maCuaHang>
+        <tenChiNhanh>Chi nhanh 03</tenChiNhanh>
+        <diaChi>Dia chi 03</diaChi>
+    </cuahang>
+    <cuahang>
+        <maCuaHang>CH04</maCuaHang>
+        <tenChiNhanh>Chi nhanh 04</tenChiNhanh>
+        <diaChi>Dia chi 04</diaChi>
+    </cuahang>
+</cuahangs>
