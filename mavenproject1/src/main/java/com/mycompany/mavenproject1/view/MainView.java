@@ -2,6 +2,8 @@ package com.mycompany.mavenproject1.view;
 
 import com.mycompany.mavenproject1.controller.MainController;
 import com.mycompany.mavenproject1.model.*;
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.table.DefaultTableModel;
@@ -58,24 +60,141 @@ public class MainView extends javax.swing.JFrame {
         });
     }
 
-    public CuaHang getShopTextField(){
-        return new CuaHang(shopIDTextField.getText().trim(), shopNameTextField.getText().trim(), shopAddressTextField.getText().trim());
+    public CuaHang getShopTextField() {
+        String id = shopIDTextField.getText().trim();
+        String name = shopNameTextField.getText().trim();
+        String address = shopAddressTextField.getText().trim();
+
+        if (id.isEmpty() || name.isEmpty() || address.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Vui lòng nhập đầy đủ thông tin cửa hàng.");
+            return null;
+        }
+
+        return new CuaHang(id, name, address);
     }
-    
-    public DonHang getOrderTextField(){
-        return new DonHang(orderIDTextField.getText().trim(), orderCustomerTextField.getText().trim(), orderDateTextField.getText().trim(), Double.parseDouble(orderTotalPriceTextField.getText().trim()));
+
+    public DonHang getOrderTextField() {
+        String id = orderIDTextField.getText().trim();
+        String customer = orderCustomerTextField.getText().trim();
+        String dateStr = orderDateTextField.getText().trim();
+        String totalStr = orderTotalPriceTextField.getText().trim();
+
+        if (id.isEmpty() || customer.isEmpty() || dateStr.isEmpty() || totalStr.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Vui lòng nhập đầy đủ thông tin đơn hàng.");
+            return null;
+        }
+
+        // Kiểm tra ngày
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            sdf.setLenient(false);
+            sdf.parse(dateStr);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ngày không hợp lệ (định dạng dd/MM/yyyy).");
+            return null;
+        }
+
+        // Kiểm tra tổng tiền
+        double totalPrice;
+        try {
+            totalPrice = Double.parseDouble(totalStr);
+            if (totalPrice < 0) {
+                JOptionPane.showMessageDialog(null, "Tổng tiền phải >= 0.");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Tổng tiền không hợp lệ (phải là số).");
+            return null;
+        }
+
+        return new DonHang(id, customer, dateStr, totalPrice);
     }
-    
-    public KhachHang getCustomerTextField(){
-        return new KhachHang(customerIDTextField.getText().trim(), customerNameTextField.getText().trim(), customerNumberPhoneTextField.getText().trim(), customerAddressTextField.getText().trim());
+
+    public KhachHang getCustomerTextField() {
+        String id = customerIDTextField.getText().trim();
+        String name = customerNameTextField.getText().trim();
+        String phone = customerNumberPhoneTextField.getText().trim();
+        String address = customerAddressTextField.getText().trim();
+
+        if (id.isEmpty() || name.isEmpty() || phone.isEmpty() || address.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Vui lòng nhập đầy đủ thông tin khách hàng.");
+            return null;
+        }
+
+        // Kiểm tra số điện thoại
+        if (!phone.matches("\\d{10,11}")) {
+            JOptionPane.showMessageDialog(null, "Số điện thoại không hợp lệ (10-11 chữ số).");
+            return null;
+        }
+
+        return new KhachHang(id, name, phone, address);
     }
-    
-    public NhanVien getStaffTextField(){
-        return new NhanVien(staffIDTextField.getText().trim(), staffNameTextField.getText().trim(), Integer.parseInt(staffAgeTextField.getText().trim()), staffPositionTextField.getText().trim(), staffShopTextField.getText().trim());
+
+    public NhanVien getStaffTextField() {
+        String id = staffIDTextField.getText().trim();
+        String name = staffNameTextField.getText().trim();
+        String ageStr = staffAgeTextField.getText().trim();
+        String position = staffPositionTextField.getText().trim();
+        String shop = staffShopTextField.getText().trim();
+
+        if (id.isEmpty() || name.isEmpty() || ageStr.isEmpty() || position.isEmpty() || shop.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Vui lòng nhập đầy đủ thông tin nhân viên.");
+            return null;
+        }
+
+        int age;
+        try {
+            age = Integer.parseInt(ageStr);
+            if (age <= 0) {
+                JOptionPane.showMessageDialog(null, "Tuổi phải > 0.");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Tuổi không hợp lệ (phải là số).");
+            return null;
+        }
+
+        return new NhanVien(id, name, age, position, shop);
     }
-    
-    public SanPham getProductTextField(){
-        return new SanPham(productIDTextField.getText().trim(), productNameTextField.getText().trim(), productTypeTextField.getText().trim(), Double.parseDouble(productPRiceTextField.getText().trim()), productSizeTextField.getText().trim(), Integer.parseInt(productStockTextField.getText().trim()));
+
+    public SanPham getProductTextField() {
+        String id = productIDTextField.getText().trim();
+        String name = productNameTextField.getText().trim();
+        String type = productTypeTextField.getText().trim();
+        String priceStr = productPRiceTextField.getText().trim();
+        String size = productSizeTextField.getText().trim();
+        String stockStr = productStockTextField.getText().trim();
+
+        if (id.isEmpty() || name.isEmpty() || type.isEmpty() || priceStr.isEmpty() || size.isEmpty() || stockStr.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Vui lòng nhập đầy đủ thông tin sản phẩm.");
+            return null;
+        }
+
+        double price;
+        try {
+            price = Double.parseDouble(priceStr);
+            if (price < 0) {
+                JOptionPane.showMessageDialog(null, "Giá phải >= 0.");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Giá không hợp lệ (phải là số).");
+            return null;
+        }
+
+        int stock;
+        try {
+            stock = Integer.parseInt(stockStr);
+            if (stock < 0) {
+                JOptionPane.showMessageDialog(null, "Số lượng tồn kho phải >= 0.");
+                return null;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Số lượng tồn kho không hợp lệ (phải là số).");
+            return null;
+        }
+
+        return new SanPham(id, name, type, price, size, stock);
     }
     
     public void setShopTextField(String maCuaHang, String tenChiNhanh, String diaChi) {
