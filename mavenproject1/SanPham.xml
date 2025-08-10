@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<products>
+    <product>
+        <maSanPham>SP01</maSanPham>
+        <tenSanPham>San pham 01</tenSanPham>
+        <loai>01</loai>
+        <gia>1000.0</gia>
+        <size>01</size>
+        <soLuongTon>100</soLuongTon>
+    </product>
+    <product>
+        <maSanPham>SP02</maSanPham>
+        <tenSanPham>San pham 02</tenSanPham>
+        <loai>02</loai>
+        <gia>2000.0</gia>
+        <size>02</size>
+        <soLuongTon>200</soLuongTon>
+    </product>
+    <product>
+        <maSanPham>SP03</maSanPham>
+        <tenSanPham>San pham 03</tenSanPham>
+        <loai>03</loai>
+        <gia>3000.0</gia>
+        <size>03</size>
+        <soLuongTon>300</soLuongTon>
+    </product>
+</products>
