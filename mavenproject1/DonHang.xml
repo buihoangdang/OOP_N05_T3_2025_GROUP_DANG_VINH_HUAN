@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<donHangs>
+    <donHang>
+        <maDonHang>DH01</maDonHang>
+        <maKhachHang>KH01</maKhachHang>
+        <ngayDat>01/01/2001</ngayDat>
+        <tongTien>100.0</tongTien>
+    </donHang>
+    <donHang>
+        <maDonHang>DH02</maDonHang>
+        <maKhachHang>KH02</maKhachHang>
+        <ngayDat>02/02/2002</ngayDat>
+        <tongTien>200.0</tongTien>
+    </donHang>
+</donHangs>
