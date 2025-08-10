@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<nhanViens>
+    <nhanVien>
+        <maNhanVien>NV01</maNhanVien>
+        <hoTen>Nhan vien 01</hoTen>
+        <tuoi>1</tuoi>
+        <viTri>Vi tri 1</viTri>
+        <cuaHang>CH01</cuaHang>
+    </nhanVien>
+    <nhanVien>
+        <maNhanVien>NV02</maNhanVien>
+        <hoTen>Nhan vien 02</hoTen>
+        <tuoi>2</tuoi>
+        <viTri>Vi tri 2</viTri>
+        <cuaHang>CH02</cuaHang>
+    </nhanVien>
+    <nhanVien>
+        <maNhanVien>NV03</maNhanVien>
+        <hoTen>Nhan vien 03</hoTen>
+        <tuoi>3</tuoi>
+        <viTri>Vi tri 3</viTri>
+        <cuaHang>CH03</cuaHang>
+    </nhanVien>
+    <nhanVien>
+        <maNhanVien>NV04</maNhanVien>
+        <hoTen>Nhan vien 04</hoTen>
+        <tuoi>4</tuoi>
+        <viTri>Vi tri 4</viTri>
+        <cuaHang>CH04</cuaHang>
+    </nhanVien>
+    <nhanVien>
+        <maNhanVien>NV05</maNhanVien>
+        <hoTen>Nhan vien 05</hoTen>
+        <tuoi>5</tuoi>
+        <viTri>Vi tri 5</viTri>
+        <cuaHang>CH05</cuaHang>
+    </nhanVien>
+</nhanViens>
