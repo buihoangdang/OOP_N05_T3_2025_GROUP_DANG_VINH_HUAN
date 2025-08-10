@@ -1,6 +1,9 @@
 com\mycompany\mavenproject1\model\KhachHang.class
+com\mycompany\mavenproject1\view\LoginView.class
 com\mycompany\mavenproject1\model\CuaHang.class
+com\mycompany\mavenproject1\controller\LoginController.class
 com\mycompany\mavenproject1\controller\MainController.class
+com\mycompany\mavenproject1\view\LoginView$1.class
 com\mycompany\mavenproject1\view\MainView.class
 com\mycompany\mavenproject1\view\MainView$3.class
 com\mycompany\mavenproject1\model\SanPham.class
