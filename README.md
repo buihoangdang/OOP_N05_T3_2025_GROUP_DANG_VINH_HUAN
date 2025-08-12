@@ -177,39 +177,7 @@ java -cp bin Main
         │                       ├── MainView.form
         │                       └── MainView.java
     └── target
-        ├── classes
-            └── com
-            │   └── mycompany
-            │       └── mavenproject1
-            │           ├── Mavenproject1.class
-            │           ├── controller
-            │               ├── LoginController.class
-            │               ├── MainController$1.class
-            │               └── MainController.class
-            │           ├── model
-            │               ├── CuaHang.class
-            │               ├── DataXMLHandler.class
-            │               ├── DonHang.class
-            │               ├── KhachHang.class
-            │               ├── NhanVien.class
-            │               └── SanPham.class
-            │           └── view
-            │               ├── LoginView$1.class
-            │               ├── LoginView.class
-            │               ├── LoginView.form
-            │               ├── MainView$1.class
-            │               ├── MainView$2.class
-            │               ├── MainView$3.class
-            │               ├── MainView$4.class
-            │               ├── MainView$5.class
-            │               ├── MainView.class
-            │               └── MainView.form
-        └── maven-status
-            └── maven-compiler-plugin
-                └── compile
-                    └── default-compile
-                        ├── createdFiles.lst
-                        └── inputFiles.lst
+        
 ```
 
 ---
