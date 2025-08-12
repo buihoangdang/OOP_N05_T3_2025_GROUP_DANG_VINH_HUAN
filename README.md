@@ -77,7 +77,6 @@ java -cp bin Main
 ### 🏪 Quản lý cửa hàng
 - ➕ Thêm chi nhánh mới
 - 📝 Cập nhật thông tin cửa hàng
-- 🔍 Tìm kiếm cửa hàng theo địa chỉ
 - 📊 Thống kê sản phẩm theo từng chi nhánh
 
 ### 👕 Quản lý sản phẩm
@@ -89,13 +88,11 @@ java -cp bin Main
 ### 👥 Quản lý nhân viên
 - 👤 Thêm/sửa thông tin nhân viên
 - 🏢 Phân công cửa hàng làm việc
-- 📊 Thống kê hiệu suất bán hàng
 
 ### 🛒 Quản lý khách hàng & đơn hàng
 - 👤 Lưu trữ thông tin khách hàng
 - 🧾 Tạo và quản lý đơn hàng
-- 📈 Theo dõi lịch sử mua hàng
-- 💰 Tính toán tổng doanh thu
+- 💰 Tính toán tổng giá trị đơn hàng
 
 ---
 
