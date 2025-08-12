@@ -146,19 +146,70 @@ java -cp bin Main
 ## 🔧 Cấu trúc thư mục
 
 ```
-📁 OOP_N05_T3_2025_GROUP_DANG_VINH_HUAN/
-├── 📁 src/
-│   ├── 📄 Main.java
-│   ├── 📄 SanPham.java
-│   ├── 📄 CuaHang.java
-│   ├── 📄 NhanVien.java
-│   ├── 📄 KhachHang.java
-│   └── 📄 DonHang.java
-├── 📁 bin/                # Compiled classes
-├── 📁 docs/               # Documentation
-├── 📁 test/               # Unit tests
-├── 📄 README.md
-└── 📄 .gitignore
+├── README.md
+└── mavenproject1
+    ├── CuaHang.xml
+    ├── DonHang.xml
+    ├── KhachHang.xml
+    ├── NhanVien.xml
+    ├── SanPham.xml
+    ├── pom.xml
+    ├── src
+        └── main
+        │   └── java
+        │       └── com
+        │           └── mycompany
+        │               └── mavenproject1
+        │                   ├── Mavenproject1.java
+        │                   ├── controller
+        │                       ├── LoginController.java
+        │                       └── MainController.java
+        │                   ├── model
+        │                       ├── CuaHang.java
+        │                       ├── DataXMLHandler.java
+        │                       ├── DonHang.java
+        │                       ├── KhachHang.java
+        │                       ├── NhanVien.java
+        │                       └── SanPham.java
+        │                   └── view
+        │                       ├── LoginView.form
+        │                       ├── LoginView.java
+        │                       ├── MainView.form
+        │                       └── MainView.java
+    └── target
+        ├── classes
+            └── com
+            │   └── mycompany
+            │       └── mavenproject1
+            │           ├── Mavenproject1.class
+            │           ├── controller
+            │               ├── LoginController.class
+            │               ├── MainController$1.class
+            │               └── MainController.class
+            │           ├── model
+            │               ├── CuaHang.class
+            │               ├── DataXMLHandler.class
+            │               ├── DonHang.class
+            │               ├── KhachHang.class
+            │               ├── NhanVien.class
+            │               └── SanPham.class
+            │           └── view
+            │               ├── LoginView$1.class
+            │               ├── LoginView.class
+            │               ├── LoginView.form
+            │               ├── MainView$1.class
+            │               ├── MainView$2.class
+            │               ├── MainView$3.class
+            │               ├── MainView$4.class
+            │               ├── MainView$5.class
+            │               ├── MainView.class
+            │               └── MainView.form
+        └── maven-status
+            └── maven-compiler-plugin
+                └── compile
+                    └── default-compile
+                        ├── createdFiles.lst
+                        └── inputFiles.lst
 ```
 
 ---
