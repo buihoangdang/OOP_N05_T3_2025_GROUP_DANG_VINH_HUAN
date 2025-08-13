@@ -1,7 +1,7 @@
 <h1 align="center">👕 Ứng Dụng Quản Lý Chuỗi Quần Áo</h1>
 <p align="center">
   📚 <strong>Java OOP Project</strong> – Nhóm: <code>OOP_N05_T3_2025_GROUP_DANG_VINH_HUAN</code><br>
-  🎓 Môn học: Lập trình Hướng Đối Tượng
+  🎓 Môn học: Lập trình Hướng Đối Tượng (OOP)
 </p>
 
 ---
@@ -23,7 +23,7 @@
 
 ## 🧩 Main Class
 
-| 🧾 Class              | 🛠️ Mô tả chức năng |
+| 🧾 Class              | 🛠️ Mô tả các chức năng |
 |------------------------|--------------------|
 | `SanPham`              | Quản lý thông tin sản phẩm: mã, tên, loại, giá, size, số lượng tồn. |
 | `CuaHang`              | Quản lý chi nhánh: mã cửa hàng, địa chỉ, số lượng sản phẩm. |
